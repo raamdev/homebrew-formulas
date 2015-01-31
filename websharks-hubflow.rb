@@ -1,6 +1,6 @@
 require 'formula'
 
-class WebSharksHubflow < Formula
+class WebsharksHubflow < Formula
   version "140811"
   homepage "http://github.com/websharks/hubflow"
   url "https://github.com/websharks/hubflow.git"

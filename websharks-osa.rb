@@ -1,6 +1,6 @@
 require 'formula'
 
-class WebSharksOsa < Formula
+class WebsharksOsa < Formula
   version "150131"
   homepage "https://github.com/websharks/osa"
   url "https://github.com/websharks/osa.git"
