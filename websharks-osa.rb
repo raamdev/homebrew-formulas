@@ -7,7 +7,12 @@ class WebsharksOsa < Formula
   sha1 "1e45a118bfae9a6988a87bc2a08de275131ce3a9"
 
   def install
+    prefix.install Dir["*"]
     script_libraries = File.expand_path("~/Library/Script Libraries")
+
+    if !File.directory? "#{script_libraries}"
+      mkdir "#{script_libraries}"
+    end
     ln_s "#{prefix}", "#{script_libraries}/websharks", :force => true
   end
 
