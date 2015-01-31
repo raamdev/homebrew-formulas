@@ -4,7 +4,7 @@ class WebsharksOsa < Formula
   version "150131"
   homepage "https://github.com/websharks/osa"
   url "https://github.com/websharks/osa.git"
-  sha1 "1e45a118bfae9a6988a87bc2a08de275131ce3a9"
+  sha1 "5449db480c6154d69e8614f66fe06525fbd2b7b4"
 
   def install
     prefix.install Dir["*"]
