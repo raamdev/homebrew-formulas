@@ -1,7 +1,7 @@
 require 'formula'
 
 class WebsharksHubflow < Formula
-  homepage "http://github.com/websharks/hubflow"
+  homepage "https://github.com/websharks/hubflow"
   head "https://github.com/websharks/hubflow.git"
   url "https://github.com/websharks/hubflow/archive/master.tar.gz"
 
