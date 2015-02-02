@@ -1,10 +1,9 @@
 require 'formula'
 
 class WebsharksOsa < Formula
-  version "150131"
   homepage "https://github.com/websharks/osa"
-  url "https://github.com/websharks/osa.git"
-  sha1 "5449db480c6154d69e8614f66fe06525fbd2b7b4"
+  head "https://github.com/websharks/osa.git"
+  url "https://github.com/websharks/osa/archive/master.tar.gz"
 
   def install
     prefix.install Dir["*"] # Install files.
@@ -16,7 +15,7 @@ class WebsharksOsa < Formula
     if !File.directory? "#{script_libraries_dir}"
       mkdir "#{script_libraries_dir}"
     end # Make this directory if it does not exist yet.
-    
+
     ln_s "#{prefix}", "#{script_libraries_dir}/websharks", :force => true
 
     if File.directory? "#{typinator_scripts_dir1}"
