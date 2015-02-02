@@ -2,8 +2,8 @@ require 'formula'
 
 class WebsharksHubflow < Formula
   homepage "https://github.com/websharks/hubflow"
-  head "https://github.com/websharks/hubflow.git"
-  url "https://github.com/websharks/hubflow/archive/master.tar.gz"
+  head "https://github.com/websharks/hubflow.git", :branch => "000000-dev"
+  url "https://github.com/websharks/hubflow.git", :branch => "master"
 
   def install
     ENV['INSTALL_INTO'] = libexec

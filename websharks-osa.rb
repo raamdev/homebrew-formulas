@@ -2,8 +2,8 @@ require 'formula'
 
 class WebsharksOsa < Formula
   homepage "https://github.com/websharks/osa"
-  head "https://github.com/websharks/osa.git"
-  url "https://github.com/websharks/osa/archive/master.tar.gz"
+  head "https://github.com/websharks/osa.git", :branch => "000000-dev"
+  url "https://github.com/websharks/osa.git", :branch => "master"
 
   def install
     prefix.install Dir["*"] # Install files.
