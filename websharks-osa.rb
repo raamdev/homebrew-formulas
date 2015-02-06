@@ -37,25 +37,31 @@ class WebsharksOsa < Formula
     end # Create directory if not exists.
 
     if File.directory? "#{script_libraries_dir}"
-      FileUtils.ln_s "#{install_from_dir}", "#{script_libraries_dir}/websharks-osa", :force => true
+      FileUtils.rm_f "#{script_libraries_dir}/websharks-osa"
+      FileUtils.ln_s "#{install_from_dir}", "#{script_libraries_dir}/websharks-osa"
     end
 
     if File.directory? "#{typinator_scripts_dir1}"
-      FileUtils.ln_s "#{install_from_dir}/scripts/typinator-osa.bash", "#{typinator_scripts_dir1}/wsOSA", :force => true
+      FileUtils.rm_f "#{typinator_scripts_dir1}/wsOSA"
+      FileUtils.ln_s "#{install_from_dir}/scripts/typinator-osa.bash", "#{typinator_scripts_dir1}/wsOSA"
     end
 
     if File.directory? "#{typinator_scripts_dir2}"
-      FileUtils.ln_s "#{install_from_dir}/scripts/typinator-osa.bash", "#{typinator_scripts_dir2}/wsOSA", :force => true
+      FileUtils.rm_f "#{typinator_scripts_dir2}/wsOSA"
+      FileUtils.ln_s "#{install_from_dir}/scripts/typinator-osa.bash", "#{typinator_scripts_dir2}/wsOSA"
     end
 
     if File.directory? "#{services_dir}"
+
       Dir["#{services_dir}/wsOSA.*.workflow"].each do |_file|
         FileUtils.rm_rf "#{_file}"
-      end
+      end # It's a hard link; the `r` option is necessary.
+
       Dir["#{install_from_dir}/services/*.workflow"].each do |_file|
-        _basename = File.basename("#{_file}")
+        _basename = File.basename("#{_file}") # e.g. Something.workflow
         FileUtils.ln "#{_file}", "#{services_dir}/wsOSA.#{_basename}", :force => true
       end
+
     end
   end
 
