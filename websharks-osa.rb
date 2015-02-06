@@ -1,10 +1,9 @@
 require "formula"
 
 class WebsharksOsa < Formula
-  version "latest" # Latest version.
   homepage "https://github.com/websharks/osa"
   head "https://github.com/websharks/osa.git", :branch => "000000-dev"
-  url "https://github.com/websharks/osa.git", :branch => "master"
+  url "https://github.com/websharks/osa.git", :tag => "150205"
 
   option "with-x", "Unused at this time."
 
