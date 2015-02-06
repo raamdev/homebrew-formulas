@@ -59,7 +59,7 @@ class WebsharksOsa < Formula
 
       Dir["#{install_from_dir}/services/*.workflow"].each do |_workflow|
         _workflow_basename = File.basename("#{_workflow}") # e.g. `Something.workflow`
-        FileUtils.cp "#{_workflow}", "#{services_dir}/wsOSA.#{_workflow_basename}"
+        FileUtils.cp_r "#{_workflow}", "#{services_dir}/wsOSA.#{_workflow_basename}"
       end # Copies service workflow files.
 
     end
