@@ -53,13 +53,13 @@ class WebsharksOsa < Formula
 
     if File.directory? "#{services_dir}"
 
-      Dir["#{services_dir}/wsOSA.*.workflow"].each do |_dir|
-        FileUtils.rm_rf "#{_dir}" # Delete recursively.
+      Dir["#{services_dir}/wsOSA.*.workflow"].each do |_workflow|
+        FileUtils.rm_rf "#{_workflow}" # Delete recursively.
       end # It's a workflow; i.e. a directory.
 
-      Dir["#{install_from_dir}/services/*.workflow"].each do |_file|
-        _basename = File.basename("#{_file}") # e.g. `Something.workflow`
-        FileUtils.cp "#{_file}", "#{services_dir}/wsOSA.#{_basename}"
+      Dir["#{install_from_dir}/services/*.workflow"].each do |_workflow|
+        _workflow_basename = File.basename("#{_workflow}") # e.g. `Something.workflow`
+        FileUtils.cp "#{_workflow}", "#{services_dir}/wsOSA.#{_workflow_basename}"
       end # Copies service workflow files.
 
     end
