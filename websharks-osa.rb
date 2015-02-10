@@ -3,7 +3,7 @@ require "formula"
 class WebsharksOsa < Formula
   homepage "https://github.com/websharks/osa"
   head "https://github.com/websharks/osa.git", :branch => "000000-dev"
-  url "https://github.com/websharks/osa.git", :tag => "150210+443"
+  url "https://github.com/websharks/osa.git", :tag => "150210+456"
 
   depends_on "terminal-notifier" => :recommended
   option "with-local", "Symlinks based on local copy of ~/WebSharks/osa"
