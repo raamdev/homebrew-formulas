@@ -5,6 +5,7 @@ class WebsharksOsa < Formula
   head "https://github.com/websharks/osa.git", :branch => "000000-dev"
   url "https://github.com/websharks/osa.git", :tag => "150206+952"
 
+  depends_on "terminal-notifier" => :recommended
   option "with-local", "Symlinks based on local copy of ~/WebSharks/osa"
 
   def install
@@ -43,12 +44,12 @@ class WebsharksOsa < Formula
 
     if File.directory? "#{typinator_scripts_dir1}"
       FileUtils.rm_f "#{typinator_scripts_dir1}/wsOSA"
-      FileUtils.ln_s "#{install_from_dir}/scripts/typinator-osa.bash", "#{typinator_scripts_dir1}/wsOSA"
+      FileUtils.ln_s "#{install_from_dir}/scripts/typinator/wsOSA.bash", "#{typinator_scripts_dir1}/wsOSA"
     end
 
     if File.directory? "#{typinator_scripts_dir2}"
       FileUtils.rm_f "#{typinator_scripts_dir2}/wsOSA"
-      FileUtils.ln_s "#{install_from_dir}/scripts/typinator-osa.bash", "#{typinator_scripts_dir2}/wsOSA"
+      FileUtils.ln_s "#{install_from_dir}/scripts/typinator/wsOSA.bash", "#{typinator_scripts_dir2}/wsOSA"
     end
 
     if File.directory? "#{services_dir}"
