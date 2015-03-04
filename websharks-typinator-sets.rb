@@ -4,7 +4,6 @@ class WebsharksTypinatorSets < Formula
   homepage "https://github.com/websharks/typinator-sets"
   url "https://github.com/websharks/typinator-sets.git", :branch => "master"
 
-  depends_on "terminal-notifier" => :recommended
   option "with-local", "Symlinks based on local copy of ~/Projects/typinator-sets"
 
   def install
@@ -20,11 +19,6 @@ class WebsharksTypinatorSets < Formula
         install_from_dir = "#{local_repo_dir}"
       end # Only if directory exists.
     end # Use local repo.
-
-    FileUtils.rm_f "#{script_libraries_dir}/websharks"
-    FileUtils.rm_f "#{typinator_scripts_dir1}/runOSA"
-    FileUtils.rm_f "#{typinator_scripts_dir2}/runOSA"
-
 
     if File.directory? "#{typinator_sets_dir}"
       FileUtils.rm_f "#{typinator_sets_dir}/WebSharks-Abbreviations-Jason.tyset"
