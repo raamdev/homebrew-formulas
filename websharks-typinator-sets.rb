@@ -2,6 +2,7 @@ require "formula"
 
 class WebsharksTypinatorSets < Formula
   homepage "https://github.com/websharks/typinator-sets"
+  head "https://github.com/websharks/typinator-sets.git", :branch => "master"
   url "https://github.com/websharks/typinator-sets.git", :branch => "master"
 
   option "with-local", "Symlinks based on local copy of ~/Projects/typinator-sets"
