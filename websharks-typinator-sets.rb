@@ -35,6 +35,11 @@ class WebsharksTypinatorSets < Formula
     end
 
     if File.directory? "#{typinator_sets_dir}"
+      FileUtils.rm_f "#{typinator_sets_dir}/WebSharks-Abbreviations-Jason-Regex.tyset"
+      FileUtils.ln_s "#{install_from_dir}/WebSharks-Abbreviations-Jason-Regex.tyset", "#{typinator_sets_dir}/WebSharks-Abbreviations-Jason-Regex.tyset"
+    end
+
+    if File.directory? "#{typinator_sets_dir}"
       FileUtils.rm_f "#{typinator_sets_dir}/WebSharks-Abbreviations-Raam.tyset"
       FileUtils.ln_s "#{install_from_dir}/WebSharks-Abbreviations-Raam.tyset", "#{typinator_sets_dir}/WebSharks-Abbreviations-Raam.tyset"
     end
