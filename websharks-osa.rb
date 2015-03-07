@@ -4,7 +4,7 @@ class WebsharksOsa < Formula
   # Formula source and info.
   homepage "https://github.com/websharks/osa"
   head "https://github.com/websharks/osa.git", :branch => "000000-dev"
-  url "https://github.com/websharks/osa.git", :tag => "150224"
+  url "https://github.com/websharks/osa.git", :tag => "150307"
 
   # Terminal notifier used by some OSA scripts.
   depends_on "terminal-notifier" => :recommended
