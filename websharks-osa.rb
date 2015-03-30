@@ -10,7 +10,7 @@ class WebsharksOsa < Formula
   depends_on "terminal-notifier" => :recommended
 
   # Allow installation to create symlinks pointing to a local copy of the repo.
-  option "with-local", "Symlinks based on local copy of ~/WebSharks/osa"
+  option "with-local", "Symlinks based on local copy of ~/Projects/websharks/osa"
 
   # Installation routine.
   def install # Install repo files.
@@ -18,7 +18,7 @@ class WebsharksOsa < Formula
 
     # Define a few directory paths used below.
 
-    local_repo_dir = File.expand_path("~/WebSharks/osa")
+    local_repo_dir = File.expand_path("~/Projects/websharks/osa")
     script_libraries_dir = File.expand_path("~/Library/Script Libraries")
     typinator_scripts_dir = File.expand_path("~/Library/Application Support/Typinator/Sets/Includes/Scripts")
     services_dir = File.expand_path("~/Library/Services")
