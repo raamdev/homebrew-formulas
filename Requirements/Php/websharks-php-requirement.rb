@@ -1,4 +1,3 @@
-require "requirement"
 require File.join(File.dirname(__FILE__), 'websharks-php-requirement')
 
 class WebsharksPhpRequirement < Requirement
