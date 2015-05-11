@@ -7,8 +7,8 @@ class WebsharksApigen < Formula
   url "http://apigen.org/apigen.phar"
   version "4.1.0"
 
-  depends_on WebSharksPhpVersionRequirement
-  depends_on WebSharksPhpPharRequirement
+  depends_on WebsharksPhpVersionRequirement
+  depends_on WebsharksPhpPharRequirement
 
   def install
     mv "apigen.phar", "apigen-#{version}.phar"

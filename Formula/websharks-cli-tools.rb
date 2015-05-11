@@ -6,7 +6,7 @@ class WebsharksCliTools < Formula
   head "https://github.com/websharks/cli-tools.git", :branch => "000000-dev"
   url "https://github.com/websharks/cli-tools.git", :tag => "000000-dev"
 
-  depends_on WebSharksPhpVersionRequirement
+  depends_on WebsharksPhpVersionRequirement
   depends_on "terminal-notifier" => :recommended
 
   def install

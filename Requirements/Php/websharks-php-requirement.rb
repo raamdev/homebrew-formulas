@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'websharks-php-requirement')
+require "requirement"
 
 class WebsharksPhpRequirement < Requirement
   def fatal?

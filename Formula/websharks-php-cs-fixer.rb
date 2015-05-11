@@ -7,8 +7,8 @@ class WebsharksPhpCsFixer < Formula
   url "http://get.sensiolabs.org/php-cs-fixer.phar"
   version "1.7"
 
-  depends_on WebSharksPhpVersionRequirement
-  depends_on WebSharksPhpPharRequirement
+  depends_on WebsharksPhpVersionRequirement
+  depends_on WebsharksPhpPharRequirement
 
   def install
     mv "php-cs-fixer.phar", "php-cs-fixer-#{version}.phar"

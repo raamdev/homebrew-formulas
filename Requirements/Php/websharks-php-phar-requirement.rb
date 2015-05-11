@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'websharks-php-requirement')
 
-class WebsharksPhpPharRequirement < WebSharksPhpRequirement
+class WebsharksPhpPharRequirement < WebsharksPhpRequirement
   def satisfied?
     `php -m`.downcase.include? "phar"
   end

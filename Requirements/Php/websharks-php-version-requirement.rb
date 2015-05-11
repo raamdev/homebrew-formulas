@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'websharks-php-requirement')
 
-class WebSharksPhpVersionRequirement < WebSharksPhpRequirement
+class WebsharksPhpVersionRequirement < WebsharksPhpRequirement
   def satisfied?
     %w{php54 php55 php56}.any? do |php|
         f = Formula[php]

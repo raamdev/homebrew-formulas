@@ -8,9 +8,9 @@ class WebsharksPhing < Formula
   url "http://www.phing.info/get/phing-latest.phar"
   version "2.10.1"
 
-  depends_on WebSharksPhpVersionRequirement
-  depends_on WebSharksPhpPharRequirement
-  depends_on WebSharksPhpPharBuildingRequirement
+  depends_on WebsharksPhpVersionRequirement
+  depends_on WebsharksPhpPharRequirement
+  depends_on WebsharksPhpPharBuildingRequirement
 
   def install
     mv "phing-latest.phar", "phing-#{version}.phar"

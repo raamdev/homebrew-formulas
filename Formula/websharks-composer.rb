@@ -7,8 +7,8 @@ class WebsharksComposer < Formula
   url "https://getcomposer.org/composer.phar"
   version "1.0-dev"
 
-  depends_on WebSharksPhpVersionRequirement
-  depends_on WebSharksPhpPharRequirement
+  depends_on WebsharksPhpVersionRequirement
+  depends_on WebsharksPhpPharRequirement
 
   def install
     mv "composer.phar", "composer-#{version}.phar"

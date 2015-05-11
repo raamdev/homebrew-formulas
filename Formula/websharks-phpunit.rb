@@ -7,8 +7,8 @@ class WebsharksPhpunit < Formula
   url "https://phar.phpunit.de/phpunit.phar"
   version "4.6.0"
 
-  depends_on WebSharksPhpVersionRequirement
-  depends_on WebSharksPhpPharRequirement
+  depends_on WebsharksPhpVersionRequirement
+  depends_on WebsharksPhpPharRequirement
 
   def install
     mv "phpunit.phar", "phpunit-#{version}.phar"
