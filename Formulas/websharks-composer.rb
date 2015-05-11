@@ -1,14 +1,14 @@
 require "formula"
-require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-version-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement", __FILE__)
 
 class WebsharksComposer < Formula
   homepage "https://getcomposer.org/download/"
   url "https://getcomposer.org/composer.phar"
   version "1.0-dev"
 
-  depends_on PhpMetaRequirement
-  depends_on PharRequirement
+  depends_on WebSharksPhpVersionRequirement
+  depends_on WebSharksPhpPharRequirement
 
   def install
     mv "composer.phar", "composer-#{version}.phar"

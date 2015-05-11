@@ -1,14 +1,14 @@
 require "formula"
-require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-version-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement", __FILE__)
 
 class WebsharksPhpCsFixer < Formula
   homepage "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
   url "http://get.sensiolabs.org/php-cs-fixer.phar"
   version "1.7"
 
-  depends_on PhpMetaRequirement
-  depends_on PharRequirement
+  depends_on WebSharksPhpVersionRequirement
+  depends_on WebSharksPhpPharRequirement
 
   def install
     mv "php-cs-fixer.phar", "php-cs-fixer-#{version}.phar"

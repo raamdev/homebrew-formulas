@@ -1,16 +1,16 @@
 require "formula"
-require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-building-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-version-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-phar-building-requirement", __FILE__)
 
 class WebsharksPhing < Formula
   homepage "https://www.phing.info/"
   url "http://www.phing.info/get/phing-latest.phar"
   version "2.10.1"
 
-  depends_on PhpMetaRequirement
-  depends_on PharRequirement
-  depends_on PharBuildingRequirement
+  depends_on WebSharksPhpVersionRequirement
+  depends_on WebSharksPhpPharRequirement
+  depends_on WebSharksPhpPharBuildingRequirement
 
   def install
     mv "phing-latest.phar", "phing-#{version}.phar"

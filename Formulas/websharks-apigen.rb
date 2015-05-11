@@ -1,14 +1,14 @@
 require "formula"
-require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-version-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement", __FILE__)
 
 class WebsharksApigen < Formula
   homepage "https://github.com/ApiGen/ApiGen"
   url "http://apigen.org/apigen.phar"
   version "4.1.0"
 
-  depends_on PhpMetaRequirement
-  depends_on PharRequirement
+  depends_on WebSharksPhpVersionRequirement
+  depends_on WebSharksPhpPharRequirement
 
   def install
     mv "apigen.phar", "apigen-#{version}.phar"

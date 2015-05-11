@@ -9,7 +9,7 @@ class WebsharksTypinatorSets < Formula
   option "with-local2", "Symlinks based on local copy of ~/WebSharks/typinator-sets"
 
   def install
-    prefix.install Dir["*"] # Copy all files.
+    prefix.install Dir["*"]
 
     local_repo_dir = File.expand_path("~/Projects/typinator-sets")
     local2_repo_dir = File.expand_path("~/WebSharks/typinator-sets")

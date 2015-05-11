@@ -1,20 +1,18 @@
 require "formula"
+require File.expand_path("../../Requirements/Php/websharks-php-version-requirement", __FILE__)
 
 class WebsharksOsa < Formula
-  # Formula source and info.
   homepage "https://github.com/websharks/osa"
   head "https://github.com/websharks/osa.git", :branch => "000000-dev"
   url "https://github.com/websharks/osa.git", :tag => "150307"
 
-  # Terminal notifier used by some OSA scripts.
+  depends_on WebSharksPhpVersionRequirement
   depends_on "terminal-notifier" => :recommended
 
-  # Allow installation to create symlinks pointing to a local copy of the repo.
   option "with-local", "Symlinks based on local copy of ~/Projects/websharks/osa"
 
-  # Installation routine.
-  def install # Install repo files.
-    prefix.install Dir["*"] # Copy all files.
+  def install
+    prefix.install Dir["*"]
 
     # Define a few directory paths used below.
 
@@ -75,7 +73,6 @@ class WebsharksOsa < Formula
     end
   end
 
-  test do # Test routine.
-    # Not tests at this time.
+  test do
   end
 end

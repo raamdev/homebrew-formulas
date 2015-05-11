@@ -1,14 +1,14 @@
 require "formula"
-require File.expand_path("../../Requirements/php-meta-requirement", __FILE__)
-require File.expand_path("../../Requirements/phar-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-version-requirement", __FILE__)
+require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement", __FILE__)
 
 class WebsharksPhpunit < Formula
   homepage "https://phpunit.de/"
   url "https://phar.phpunit.de/phpunit.phar"
   version "4.6.0"
 
-  depends_on PhpMetaRequirement
-  depends_on PharRequirement
+  depends_on WebSharksPhpVersionRequirement
+  depends_on WebSharksPhpPharRequirement
 
   def install
     mv "phpunit.phar", "phpunit-#{version}.phar"

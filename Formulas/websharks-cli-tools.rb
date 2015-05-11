@@ -1,20 +1,18 @@
 require "formula"
+require File.expand_path("../../Requirements/Php/websharks-php-version-requirement", __FILE__)
 
 class WebsharksCliTools < Formula
-  # Formula source and info.
   homepage "https://github.com/websharks/cli-tools"
   head "https://github.com/websharks/cli-tools.git", :branch => "000000-dev"
   url "https://github.com/websharks/cli-tools.git", :tag => "000000-dev"
 
-  # Terminal notifier used by some OSA scripts.
+  depends_on WebSharksPhpVersionRequirement
   depends_on "terminal-notifier" => :recommended
 
-  # Installation routine.
-  def install # Install repo files.
-    prefix.install Dir["*"] # Copy all files.
+  def install
+    prefix.install Dir["*"]
   end
 
-  test do # Test routine.
-    # Not tests at this time.
+  test do
   end
 end
