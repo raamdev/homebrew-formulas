@@ -5,7 +5,7 @@ require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement"
 class WebsharksApigen < Formula
   homepage "https://github.com/ApiGen/ApiGen"
   url "http://apigen.org/apigen.phar"
-  version "4.1.0"
+  version "4.1.0.1"
 
   depends_on WebsharksPhpVersionRequirement
   depends_on WebsharksPhpPharRequirement
@@ -14,7 +14,7 @@ class WebsharksApigen < Formula
     mv "apigen.phar", "apigen-#{version}.phar"
     libexec.install "apigen-#{version}.phar"
     sh = libexec + "apigen"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/apigen-#{version}.phar $*")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/apigen-#{version}.phar \"$*\"")
     chmod 0755, sh
     bin.install_symlink sh
   end
