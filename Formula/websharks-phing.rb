@@ -6,7 +6,7 @@ require File.expand_path("../../Requirements/Php/websharks-php-phar-building-req
 class WebsharksPhing < Formula
   homepage "https://www.phing.info/"
   url "http://www.phing.info/get/phing-latest.phar"
-  version "2.10.1.2"
+  version "2.10.1.3"
 
   depends_on WebsharksPhpVersionRequirement
   depends_on WebsharksPhpPharRequirement
@@ -16,7 +16,7 @@ class WebsharksPhing < Formula
     mv "phing-latest.phar", "phing-#{version}.phar"
     libexec.install "phing-#{version}.phar"
     sh = libexec + "phing"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/phing-#{version}.phar \"$*\"")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/phing-#{version}.phar \"$@\"")
     chmod 0755, sh
     bin.install_symlink sh
   end

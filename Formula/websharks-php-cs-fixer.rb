@@ -5,7 +5,7 @@ require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement"
 class WebsharksPhpCsFixer < Formula
   homepage "https://github.com/FriendsOfPHP/PHP-CS-Fixer"
   url "http://get.sensiolabs.org/php-cs-fixer.phar"
-  version "1.7.0.1"
+  version "1.7.0.2"
 
   depends_on WebsharksPhpVersionRequirement
   depends_on WebsharksPhpPharRequirement
@@ -14,7 +14,7 @@ class WebsharksPhpCsFixer < Formula
     mv "php-cs-fixer.phar", "php-cs-fixer-#{version}.phar"
     libexec.install "php-cs-fixer-#{version}.phar"
     sh = libexec + "php-cs-fixer"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/php-cs-fixer-#{version}.phar \"$*\"")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/php-cs-fixer-#{version}.phar \"$@\"")
     chmod 0755, sh
     bin.install_symlink sh
   end
