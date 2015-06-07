@@ -5,6 +5,7 @@ require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement"
 class WebsharksCliTools < Formula
   homepage "https://github.com/websharks/cli-tools"
   url "https://github.com/websharks/cli-tools/releases/download/150606/cli-tools.phar"
+  sha256 "512e9fa2ecd024c6e3c325f47698ba37dc925a456f5d8e43641319bfaeaf2d38"
   version "150606"
 
   depends_on WebsharksPhpVersionRequirement
@@ -15,7 +16,7 @@ class WebsharksCliTools < Formula
     mv "cli-tools.phar", "cli-tools-#{version}.phar"
     libexec.install "cli-tools-#{version}.phar"
     sh = libexec + "ws"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d ___cli.phar_proxy=\"$0\" -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/websharks-cli-tools-#{version}.phar \"$@\"")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d ___cli.phar_proxy=\"$0\" -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/cli-tools-#{version}.phar \"$@\"")
     chmod 0755, sh
     bin.install_symlink sh
   end
