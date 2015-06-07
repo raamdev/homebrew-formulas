@@ -2,7 +2,7 @@ require File.join(File.dirname(__FILE__), 'websharks-php-requirement')
 
 class WebsharksPhpVersionRequirement < WebsharksPhpRequirement
   def satisfied?
-    %w{php54 php55 php56}.any? do |php|
+    %w{php55 php56}.any? do |php|
         f = Formula[php]
         f.rack.directory? && f.rack.children.length > 0
     end
