@@ -16,7 +16,7 @@ class WebsharksCliTools < Formula
     mv "cli-tools.phar", "cli-tools-#{version}.phar"
     libexec.install "cli-tools-#{version}.phar"
     sh = libexec + "ws"
-    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d ___cli.phar_proxy=\"$0\" -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/cli-tools-#{version}.phar \"$@\"")
+    sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d session.name=cli.\"$0\" -d allow_url_fopen=on -d date.timezone=UTC #{libexec}/cli-tools-#{version}.phar \"$@\"")
     chmod 0755, sh
     bin.install_symlink sh
   end
