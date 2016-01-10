@@ -5,7 +5,7 @@ require File.expand_path("../../Requirements/Php/websharks-php-phar-requirement"
 class WebsharksCliTools < Formula
   homepage "https://github.com/websharks/cli-tools"
   url "https://github.com/websharks/cli-tools/releases/download/160110/cli-tools.phar"
-  sha256 "05f2054b3be58cd90a7ce9c89fe277f03fc21647029277183ec5e14a8534741c"
+  sha256 "85aec45d4809ad5e818e2b8abce09a77cc11b75b570070704988d918bcb1fdd4"
   version "160110"
 
   depends_on WebsharksPhpVersionRequirement
