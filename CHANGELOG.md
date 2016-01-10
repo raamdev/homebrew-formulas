@@ -1,3 +1,4 @@
-## v15xxxx
+## v160110
 
-- Initial release.
+- Adding PHP70 package as a valid dependency.
+- Updating to latest version of the websharks/cli-tools.
