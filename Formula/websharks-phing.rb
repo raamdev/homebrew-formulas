@@ -14,7 +14,6 @@ class WebsharksPhing < Formula
   depends_on WebsharksPhpPharBuildingRequirement
 
   def install
-    mv "phing-latest.phar", "phing-#{version}.phar"
     libexec.install "phing-#{version}.phar"
     sh = libexec + "phing"
     sh.write("#!/usr/bin/env bash\n\n/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off -d date.timezone=UTC #{libexec}/phing-#{version}.phar \"$@\"")
