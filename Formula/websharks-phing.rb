@@ -7,7 +7,7 @@ class WebsharksPhing < Formula
   homepage "https://www.phing.info/"
   url "http://www.phing.info/get/phing-latest.phar"
   sha1 "5b08b1f44b05b02a298400aa51ede8e0849b885ed6e27357bc86f5b011876aca"
-  version "2.10.1.3"
+  version "latest"
 
   depends_on WebsharksPhpVersionRequirement
   depends_on WebsharksPhpPharRequirement
