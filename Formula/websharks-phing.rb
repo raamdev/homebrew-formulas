@@ -6,7 +6,7 @@ require File.expand_path("../../Requirements/Php/websharks-php-phar-building-req
 class WebsharksPhing < Formula
   homepage "https://www.phing.info/"
   url "http://www.phing.info/get/phing-2.14.0.phar"
-  sha256 "5b08b1f44b05b02a298400aa51ede8e0849b885ed6e27357bc86f5b011876aca"
+  sha256 "d93b31da0d9a2634089beab1ea776e53b4ee809395334f38529e8acdf4b88735"
   version "2.14.0"
 
   depends_on WebsharksPhpVersionRequirement
