@@ -3,7 +3,7 @@ require File.expand_path("../../Requirements/Php/websharks-php-version-requireme
 
 class WebsharksOsa < Formula
   homepage "https://github.com/websharks/osa"
-  head "https://github.com/websharks/osa.git", :branch => "000000-dev"
+  head "https://github.com/websharks/osa.git", :branch => "dev"
   url "https://github.com/websharks/osa.git", :tag => "150307"
 
   depends_on WebsharksPhpVersionRequirement
